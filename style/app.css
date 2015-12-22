@@ -1,0 +1,93 @@
+html, body {
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.title{
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  cursor: default;
+}
+
+.divider {
+  border-color: #000;
+  width: 1%;
+  border-bottom: 5px solid #000;
+  margin: 1rem auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+/* Color Canvas */
+#app {
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+/* Input */
+.color-field {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.color-field > input {
+  height: 2.5rem;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+
+.color-field::before {
+  content: 'HEX';
+  margin-bottom: 3rem;
+  display: block;
+  text-align: center;
+  font-size: 4rem;
+}
+
+/* Color History */
+.color-history-wrap {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+
+.color-history li {
+  display: inline-block;
+  margin-right: 10rem;
+  margin-bottom: 2rem;
+}
+
+.color-history-item {
+  cursor: pointer;
+  text-decoration: none;
+
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+
+.color-history-item:hover, .color-history-item:active, .color-history-item:focus {
+  text-decoration: underline;
+}
